@@ -10,6 +10,7 @@ RUN apk add --update --no-cache --virtual .build-deps \
         py2-pip \
       && apk add --update --no-cache python2 \
       && pip install PySocks \
+      && pip install six \
       && rm -rf /var/cache/apk/* \
       && hg clone https://bitbucket.org/richardpenman/pywhois \
       && chmod +x pywhois/setup.py \
